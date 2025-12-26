@@ -22,6 +22,7 @@ public class OrderProductTest extends BaseTest{
 	@Test(dataProvider="getData", groups= {"PlaceOrder"})
 	public void orderProduct(HashMap<String, String> inputData) throws InterruptedException, IOException{
 		
+		//This will order a new Product
 		ProductsLandingPage productsPage = loginPage.loginWebApplication(inputData.get("username"), inputData.get("password"));
 		
 		productsPage.addProductToCart(inputData.get("product"));
